@@ -41,6 +41,11 @@ body {
   border: 18px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
 }
+@media screen and (max-width: 576px) {
+  .container::after {
+    display: none;
+  }
+}
 
 /* ===== Logo ===== */
 .hydra-intro__logo {
