@@ -1,0 +1,125 @@
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #0b4ea2;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.hydra-intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  background: #083b7c;
+  padding: 60px 50px;
+  position: relative;
+}
+
+/* ===== Decorative accents ===== */
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border: 18px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+/* ===== Logo ===== */
+.hydra-intro__logo {
+  display: inline-block;
+  background: #ffffff;
+  padding: 14px 20px;
+  border-radius: 6px;
+  margin-bottom: 35px;
+}
+
+.hydra-intro__logo img {
+  max-width: 190px;
+}
+
+/* ===== Typography ===== */
+.hydra-intro__title {
+  font-size: 30px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.hydra-intro__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 28px;
+  color: #d9e2ef;
+}
+
+/* ===== Buttons ===== */
+.hydra-intro__footer {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 55px;
+}
+
+.hydra__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  background: #d64343;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.hydra__btn:hover {
+  background: #bf3838;
+  transform: translateY(-1px);
+}
+
+/* ===== Language separation ===== */
+.hydra-intro__footer + .hydra-intro__title {
+  padding-top: 45px;
+  margin-top: 10px;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 25px;
+  }
+
+  .hydra-intro__title {
+    font-size: 22px;
+  }
+
+  .hydra-intro__subtitle {
+    font-size: 16px;
+  }
+
+  .hydra__btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
